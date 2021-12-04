@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Proposer
  *
  * @ORM\Table(name="proposer")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\ProposerRepository")
  */
 class Proposer
 {
@@ -29,6 +29,16 @@ class Proposer
      * @ORM\GeneratedValue(strategy="NONE")
      */
     private $venteId;
+
+    public function getArticleId(): ?string
+    {
+        return $this->articleId;
+    }
+
+    public function getVenteId(): ?string
+    {
+        return $this->venteId;
+    }
 
 
 }

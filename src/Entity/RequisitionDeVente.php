@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * RequisitionDeVente
  *
  * @ORM\Table(name="requisition_de_vente")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\RequisitionDeVenteRepository")
  */
 class RequisitionDeVente
 {
@@ -41,6 +41,47 @@ class RequisitionDeVente
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $requisitionId;
+
+    public function getRequisitionDesc(): ?string
+    {
+        return $this->requisitionDesc;
+    }
+
+    public function setRequisitionDesc(?string $requisitionDesc): self
+    {
+        $this->requisitionDesc = $requisitionDesc;
+
+        return $this;
+    }
+
+    public function getDateRequisition(): ?\DateTimeInterface
+    {
+        return $this->dateRequisition;
+    }
+
+    public function setDateRequisition(?\DateTimeInterface $dateRequisition): self
+    {
+        $this->dateRequisition = $dateRequisition;
+
+        return $this;
+    }
+
+    public function getLieu(): ?string
+    {
+        return $this->lieu;
+    }
+
+    public function setLieu(?string $lieu): self
+    {
+        $this->lieu = $lieu;
+
+        return $this;
+    }
+
+    public function getRequisitionId(): ?string
+    {
+        return $this->requisitionId;
+    }
 
 
 }

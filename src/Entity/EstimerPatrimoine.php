@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * EstimerPatrimoine
  *
  * @ORM\Table(name="estimer_patrimoine")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\EstimerPatrimoineRepository")
  */
 class EstimerPatrimoine
 {
@@ -57,6 +57,64 @@ class EstimerPatrimoine
      * @ORM\Column(name="NBRE_BIENS", type="integer", nullable=true)
      */
     private $nbreBiens;
+
+    public function getCommissaire(): ?string
+    {
+        return $this->commissaire;
+    }
+
+    public function getPersonneId(): ?string
+    {
+        return $this->personneId;
+    }
+
+    public function getDureeEstimation(): ?string
+    {
+        return $this->dureeEstimation;
+    }
+
+    public function setDureeEstimation(?string $dureeEstimation): self
+    {
+        $this->dureeEstimation = $dureeEstimation;
+
+        return $this;
+    }
+
+    public function getFraisAnnexe(): ?string
+    {
+        return $this->fraisAnnexe;
+    }
+
+    public function setFraisAnnexe(?string $fraisAnnexe): self
+    {
+        $this->fraisAnnexe = $fraisAnnexe;
+
+        return $this;
+    }
+
+    public function getFraisDeplacement(): ?string
+    {
+        return $this->fraisDeplacement;
+    }
+
+    public function setFraisDeplacement(?string $fraisDeplacement): self
+    {
+        $this->fraisDeplacement = $fraisDeplacement;
+
+        return $this;
+    }
+
+    public function getNbreBiens(): ?int
+    {
+        return $this->nbreBiens;
+    }
+
+    public function setNbreBiens(?int $nbreBiens): self
+    {
+        $this->nbreBiens = $nbreBiens;
+
+        return $this;
+    }
 
 
 }

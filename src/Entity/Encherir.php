@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Encherir
  *
  * @ORM\Table(name="encherir")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\EncherirRepository")
  */
 class Encherir
 {
@@ -43,6 +43,40 @@ class Encherir
      * @ORM\Column(name="DATE_ENCHERE", type="datetime", nullable=true)
      */
     private $dateEnchere;
+
+    public function getPersonneId(): ?string
+    {
+        return $this->personneId;
+    }
+
+    public function getVenteId(): ?string
+    {
+        return $this->venteId;
+    }
+
+    public function getMontantEnchere(): ?string
+    {
+        return $this->montantEnchere;
+    }
+
+    public function setMontantEnchere(?string $montantEnchere): self
+    {
+        $this->montantEnchere = $montantEnchere;
+
+        return $this;
+    }
+
+    public function getDateEnchere(): ?\DateTimeInterface
+    {
+        return $this->dateEnchere;
+    }
+
+    public function setDateEnchere(?\DateTimeInterface $dateEnchere): self
+    {
+        $this->dateEnchere = $dateEnchere;
+
+        return $this;
+    }
 
 
 }

@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Participer
  *
  * @ORM\Table(name="participer")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\ParticiperRepository")
  */
 class Participer
 {
@@ -29,6 +29,16 @@ class Participer
      * @ORM\GeneratedValue(strategy="NONE")
      */
     private $venteId;
+
+    public function getPersonneId(): ?string
+    {
+        return $this->personneId;
+    }
+
+    public function getVenteId(): ?string
+    {
+        return $this->venteId;
+    }
 
 
 }

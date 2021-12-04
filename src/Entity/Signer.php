@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Signer
  *
  * @ORM\Table(name="signer")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\SignerRepository")
  */
 class Signer
 {
@@ -38,6 +38,21 @@ class Signer
      * @ORM\GeneratedValue(strategy="NONE")
      */
     private $articleId;
+
+    public function getPersonneId(): ?string
+    {
+        return $this->personneId;
+    }
+
+    public function getRequisitionId(): ?string
+    {
+        return $this->requisitionId;
+    }
+
+    public function getArticleId(): ?string
+    {
+        return $this->articleId;
+    }
 
 
 }

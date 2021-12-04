@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * OrdreAchatFixe
  *
  * @ORM\Table(name="ordre_achat_fixe")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\OrdreAchatFixeRepository")
  */
 class OrdreAchatFixe
 {
@@ -45,6 +45,33 @@ class OrdreAchatFixe
      * @ORM\Column(name="MONTANT_MAX_ORDRE_FIXE", type="decimal", precision=8, scale=0, nullable=true)
      */
     private $montantMaxOrdreFixe;
+
+    public function getUtiPersonneId(): ?string
+    {
+        return $this->utiPersonneId;
+    }
+
+    public function getPersonneId(): ?string
+    {
+        return $this->personneId;
+    }
+
+    public function getVenteId(): ?string
+    {
+        return $this->venteId;
+    }
+
+    public function getMontantMaxOrdreFixe(): ?string
+    {
+        return $this->montantMaxOrdreFixe;
+    }
+
+    public function setMontantMaxOrdreFixe(?string $montantMaxOrdreFixe): self
+    {
+        $this->montantMaxOrdreFixe = $montantMaxOrdreFixe;
+
+        return $this;
+    }
 
 
 }

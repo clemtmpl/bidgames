@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Vente
  *
  * @ORM\Table(name="vente")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\VenteRepository")
  */
 class Vente
 {
@@ -106,5 +106,154 @@ class Vente
      * @ORM\Column(name="PRIX_ADJUGE", type="decimal", precision=10, scale=0, nullable=true)
      */
     private $prixAdjuge;
+
+    public function getDatesVentes(): ?\DateTimeInterface
+    {
+        return $this->datesVentes;
+    }
+
+    public function setDatesVentes(?\DateTimeInterface $datesVentes): self
+    {
+        $this->datesVentes = $datesVentes;
+
+        return $this;
+    }
+
+    public function getVenteId(): ?string
+    {
+        return $this->venteId;
+    }
+
+    public function getCommissaire(): ?string
+    {
+        return $this->commissaire;
+    }
+
+    public function setCommissaire(string $commissaire): self
+    {
+        $this->commissaire = $commissaire;
+
+        return $this;
+    }
+
+    public function getRegion(): ?string
+    {
+        return $this->region;
+    }
+
+    public function setRegion(?string $region): self
+    {
+        $this->region = $region;
+
+        return $this;
+    }
+
+    public function getDepartement(): ?string
+    {
+        return $this->departement;
+    }
+
+    public function setDepartement(?string $departement): self
+    {
+        $this->departement = $departement;
+
+        return $this;
+    }
+
+    public function getAdresseId(): ?string
+    {
+        return $this->adresseId;
+    }
+
+    public function setAdresseId(?string $adresseId): self
+    {
+        $this->adresseId = $adresseId;
+
+        return $this;
+    }
+
+    public function getVilles(): ?string
+    {
+        return $this->villes;
+    }
+
+    public function setVilles(?string $villes): self
+    {
+        $this->villes = $villes;
+
+        return $this;
+    }
+
+    public function getCodePostal(): ?int
+    {
+        return $this->codePostal;
+    }
+
+    public function setCodePostal(?int $codePostal): self
+    {
+        $this->codePostal = $codePostal;
+
+        return $this;
+    }
+
+    public function getFraisAdjudication(): ?string
+    {
+        return $this->fraisAdjudication;
+    }
+
+    public function setFraisAdjudication(?string $fraisAdjudication): self
+    {
+        $this->fraisAdjudication = $fraisAdjudication;
+
+        return $this;
+    }
+
+    public function getFraisLivraison(): ?string
+    {
+        return $this->fraisLivraison;
+    }
+
+    public function setFraisLivraison(?string $fraisLivraison): self
+    {
+        $this->fraisLivraison = $fraisLivraison;
+
+        return $this;
+    }
+
+    public function getTypeVente(): ?string
+    {
+        return $this->typeVente;
+    }
+
+    public function setTypeVente(?string $typeVente): self
+    {
+        $this->typeVente = $typeVente;
+
+        return $this;
+    }
+
+    public function getCategorieVente(): ?string
+    {
+        return $this->categorieVente;
+    }
+
+    public function setCategorieVente(?string $categorieVente): self
+    {
+        $this->categorieVente = $categorieVente;
+
+        return $this;
+    }
+
+    public function getPrixAdjuge(): ?string
+    {
+        return $this->prixAdjuge;
+    }
+
+    public function setPrixAdjuge(?string $prixAdjuge): self
+    {
+        $this->prixAdjuge = $prixAdjuge;
+
+        return $this;
+    }
 
 }

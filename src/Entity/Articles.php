@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Articles
  *
  * @ORM\Table(name="articles")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\ArticlesRepository")
  */
 class Articles
 {
@@ -125,6 +125,191 @@ class Articles
      * @ORM\Column(name="PRIX_ESTIMATION", type="decimal", precision=10, scale=0, nullable=true)
      */
     private $prixEstimation;
+
+    public function getTypesArt(): ?string
+    {
+        return $this->typesArt;
+    }
+
+    public function setTypesArt(?string $typesArt): self
+    {
+        $this->typesArt = $typesArt;
+
+        return $this;
+    }
+
+    public function getPrixReserve(): ?string
+    {
+        return $this->prixReserve;
+    }
+
+    public function setPrixReserve(?string $prixReserve): self
+    {
+        $this->prixReserve = $prixReserve;
+
+        return $this;
+    }
+
+    public function getPhotos()
+    {
+        return $this->photos;
+    }
+
+    public function setPhotos($photos): self
+    {
+        $this->photos = $photos;
+
+        return $this;
+    }
+
+    public function getNumero(): ?string
+    {
+        return $this->numero;
+    }
+
+    public function setNumero(?string $numero): self
+    {
+        $this->numero = $numero;
+
+        return $this;
+    }
+
+    public function getLot(): ?int
+    {
+        return $this->lot;
+    }
+
+    public function setLot(?int $lot): self
+    {
+        $this->lot = $lot;
+
+        return $this;
+    }
+
+    public function getRefCata(): ?int
+    {
+        return $this->refCata;
+    }
+
+    public function setRefCata(?int $refCata): self
+    {
+        $this->refCata = $refCata;
+
+        return $this;
+    }
+
+    public function getArticleId(): ?string
+    {
+        return $this->articleId;
+    }
+
+    public function getPersonneId(): ?string
+    {
+        return $this->personneId;
+    }
+
+    public function setPersonneId(string $personneId): self
+    {
+        $this->personneId = $personneId;
+
+        return $this;
+    }
+
+    public function getCommissaire(): ?string
+    {
+        return $this->commissaire;
+    }
+
+    public function setCommissaire(string $commissaire): self
+    {
+        $this->commissaire = $commissaire;
+
+        return $this;
+    }
+
+    public function getRegion(): ?string
+    {
+        return $this->region;
+    }
+
+    public function setRegion(?string $region): self
+    {
+        $this->region = $region;
+
+        return $this;
+    }
+
+    public function getDepartement(): ?string
+    {
+        return $this->departement;
+    }
+
+    public function setDepartement(?string $departement): self
+    {
+        $this->departement = $departement;
+
+        return $this;
+    }
+
+    public function getAdresseId(): ?string
+    {
+        return $this->adresseId;
+    }
+
+    public function setAdresseId(?string $adresseId): self
+    {
+        $this->adresseId = $adresseId;
+
+        return $this;
+    }
+
+    public function getVilles(): ?string
+    {
+        return $this->villes;
+    }
+
+    public function setVilles(?string $villes): self
+    {
+        $this->villes = $villes;
+
+        return $this;
+    }
+
+    public function getCodePostal(): ?int
+    {
+        return $this->codePostal;
+    }
+
+    public function setCodePostal(?int $codePostal): self
+    {
+        $this->codePostal = $codePostal;
+
+        return $this;
+    }
+
+    public function getStyle(): ?string
+    {
+        return $this->style;
+    }
+
+    public function setStyle(?string $style): self
+    {
+        $this->style = $style;
+
+        return $this;
+    }
+
+    public function getPrixEstimation(): ?string
+    {
+        return $this->prixEstimation;
+    }
+
+    public function setPrixEstimation(?string $prixEstimation): self
+    {
+        $this->prixEstimation = $prixEstimation;
+
+        return $this;
+    }
 
 
 }

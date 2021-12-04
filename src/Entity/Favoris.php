@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Favoris
  *
  * @ORM\Table(name="favoris")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\FavorisRepository")
  */
 class Favoris
 {
@@ -29,6 +29,16 @@ class Favoris
      * @ORM\GeneratedValue(strategy="NONE")
      */
     private $venteId;
+
+    public function getPersonneId(): ?string
+    {
+        return $this->personneId;
+    }
+
+    public function getVenteId(): ?string
+    {
+        return $this->venteId;
+    }
 
 
 }

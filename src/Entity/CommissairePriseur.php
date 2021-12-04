@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * CommissairePriseur
  *
  * @ORM\Table(name="commissaire_priseur")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\CommissairePriseurRepository")
  */
 class CommissairePriseur
 {
@@ -83,6 +83,119 @@ class CommissairePriseur
      * @ORM\Column(name="EMAIL", type="string", length=250, nullable=true, options={"fixed"=true})
      */
     private $email;
+
+    public function getStatut(): ?string
+    {
+        return $this->statut;
+    }
+
+    public function setStatut(?string $statut): self
+    {
+        $this->statut = $statut;
+
+        return $this;
+    }
+
+    public function getCommissaire(): ?string
+    {
+        return $this->commissaire;
+    }
+
+    public function getRegion(): ?string
+    {
+        return $this->region;
+    }
+
+    public function setRegion(?string $region): self
+    {
+        $this->region = $region;
+
+        return $this;
+    }
+
+    public function getDepartement(): ?string
+    {
+        return $this->departement;
+    }
+
+    public function setDepartement(?string $departement): self
+    {
+        $this->departement = $departement;
+
+        return $this;
+    }
+
+    public function getAdresseId(): ?string
+    {
+        return $this->adresseId;
+    }
+
+    public function setAdresseId(?string $adresseId): self
+    {
+        $this->adresseId = $adresseId;
+
+        return $this;
+    }
+
+    public function getVilles(): ?string
+    {
+        return $this->villes;
+    }
+
+    public function setVilles(?string $villes): self
+    {
+        $this->villes = $villes;
+
+        return $this;
+    }
+
+    public function getCodePostal(): ?int
+    {
+        return $this->codePostal;
+    }
+
+    public function setCodePostal(?int $codePostal): self
+    {
+        $this->codePostal = $codePostal;
+
+        return $this;
+    }
+
+    public function getPrenom(): ?string
+    {
+        return $this->prenom;
+    }
+
+    public function setPrenom(?string $prenom): self
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    public function getDateNaissance(): ?\DateTimeInterface
+    {
+        return $this->dateNaissance;
+    }
+
+    public function setDateNaissance(?\DateTimeInterface $dateNaissance): self
+    {
+        $this->dateNaissance = $dateNaissance;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(?string $email): self
+    {
+        $this->email = $email;
+
+        return $this;
+    }
 
 
 }
