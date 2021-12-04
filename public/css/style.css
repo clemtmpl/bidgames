@@ -1,0 +1,383 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.gen-nav{
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 999;
+}
+
+.nav{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav .title{
+    display: flex;
+    align-items: center;
+}
+
+.nav .title .circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f76540;
+    margin-right: 15px;
+}
+
+.nav .title h2{
+    font-size: 33px;
+}
+
+.nav .rightLinks{
+    display: flex;
+    align-items: center;
+}
+
+.nav .rightLinks .links ul{
+    display: flex;
+}
+
+.nav .rightLinks .links ul li {
+    margin: 0 35px;
+}
+
+.nav .rightLinks a{
+    margin-left: 35px;
+    padding: 7px 33px;
+    background-color: #f98920;
+    border-radius: 3px;
+    color: white;
+}
+
+
+
+
+.gen-accueil{
+    background-color: #e7facd;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.accueil{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.accueil .title h1{
+    font-size: 65px;
+    font-weight: 500;
+    margin: 40px 0;
+}
+
+.accueil .image{
+    width: 400px;
+    height: 400px;
+    margin: 40px 0;
+    background-color: white;
+}
+
+.rectangle{
+    background-color: white;
+    position: absolute;
+    border-radius: 19px;
+    z-index: 2;
+}
+
+.rectangle1{
+    width: 264px;
+    height: 376px;
+    transform: rotate(61deg);
+    top: -180px;
+    right: 25%;
+}
+
+.rectangle2{
+    width: 525px;
+    height: 471px;
+    left: -15%;
+    transform: rotate(31deg);
+}
+
+.rectangle3{
+    width: 264px;
+    height: 376px;
+    right: -5%;
+    bottom: 10%;
+    transform: rotate(14deg);
+}
+
+
+.gen-flash{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.flash{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.loading{
+    width: 90%;
+}
+
+.loadingBar{
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #e3e6e8;
+}
+
+.loaded{
+    width: 10%;
+    height: 100%;
+    background-color:tomato;
+}
+
+.loading p {
+    margin: 20px 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.genCards{
+    margin-top: 25px;
+    width: 100%;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+
+
+.card{
+    margin: 2.5rem;
+    width: 400px;
+    height: 500px;
+}
+
+
+.card .imageCard{
+    width: 400px;
+    height: 350px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+}
+
+.card .textCard{
+    width: 100%;
+}
+
+.textCard h3{
+    font-size: 25px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+.buttonSee{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+.buttonSee a{
+    padding: 10px 35px;
+    background-color: #f98920;
+    color: white;
+    border-radius: 7px;
+}
+
+
+.genVente{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.vente{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.loadingText{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.loadingText p{
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.loadingText h3{
+    padding: 5px 15px;
+    border-left: 1px solid gray;
+    font-size: 25px;
+}
+
+.loadingText input{
+    width: 70%;
+    padding: 5px 30px;
+    border: none;
+    font-size: 17px;
+    background-color: #ededed;
+    border-radius: 10px;
+}
+
+.loadingText input::placeholder{
+    opacity: 1;
+    color: black;
+}
+
+.nextVente{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.barVente1{
+    height: 2px;
+    width: 15%;
+    background-color: #f98920;
+}
+
+.nextVente h2{
+    font-size: 40px;
+    font-weight: bold;
+    padding: 15px 20px;
+}
+
+.barVente2{
+    height: 2px;
+    width: 58%;
+    background-color: #f98920;
+}
+
+.generalCardVente{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+}
+
+.genCardVente{
+    width: 75%;
+    height: 100%;
+    padding: 2rem;
+    overflow-y: scroll;
+    display:block;
+}
+
+.cardVente{
+    width: 100%;
+    height: 200px;
+    background-color: #ededed;
+    margin: 20px 0;
+    border-radius: 15px;
+    display: flex;
+}
+
+.imageVente{
+    height: 100%;
+    width: 200px;
+    background-color: black;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.textVente{
+    display: flex;
+    width: calc(100% - 200px);
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.titleVente h2{
+    font-size: 30px;
+}
+
+.linksVente{
+    position: absolute;
+    bottom: 5px;
+    right: 5%;
+}
+
+.linksVente a{
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.linksVente .midLink{
+    margin: 0 20px;
+    padding: 0 20px;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+}
+
+/* scroll bar */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: black #fefefe;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 0px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #fefefe;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 20px;
+    border: 3px solid #fefefe;
+}
